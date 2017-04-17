@@ -1,22 +1,40 @@
 {
-	"name": "smartbottleapp",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"test": "jest"
-	},
-	"dependencies": {
-		"react": "15.4.2",
-		"react-native": "0.42.3"
-	},
-	"devDependencies": {
-		"babel-jest": "19.0.0",
-		"babel-preset-react-native": "1.9.1",
-		"jest": "19.0.2",
-		"react-test-renderer": "15.4.2"
-	},
-	"jest": {
-		"preset": "react-native"
-	}
+  "name": "smartbottleapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chart.js": "^1.1.1",
+    "native-base": "^2.1.1",
+    "react": "^15.5.3",
+    "react-chartjs": "^0.8.0",
+    "react-dom": "^15.5.3",
+    "react-easy-chart": "^0.1.13",
+    "react-native": "0.42.3",
+    "react-native-action-button": "^2.6.6",
+    "react-native-chart": "^1.0.8-beta",
+    "react-native-charts": "^3.0.0",
+    "react-native-check-box": "^1.0.4",
+    "react-native-checkbox": "^1.1.0",
+    "react-native-datepicker": "^1.4.6",
+    "react-native-drawer": "^2.3.0",
+    "react-native-highcharts": "^1.0.1",
+    "react-native-material-ui": "^1.8.0",
+    "react-native-pathjs-charts": "0.0.26",
+    "react-native-vector-icons": "^4.0.1",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "jest": "19.0.2",
+    "react-test-renderer": "15.4.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
 }

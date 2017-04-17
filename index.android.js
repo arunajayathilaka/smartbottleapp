@@ -12,28 +12,44 @@ import {
   View,
   Navigator
 } from 'react-native';
+import {Provider} from 'react-redux';
+
+import configureStore from './store.js';
+const store = configureStore();
+
 
 import Splash from './Splash';
 import Login from './src/components/login/login';
 import home from './src/components/home/home';
+import reminder from './src/components/reminder/remindertype';
+import reminderd from './src/components/reminder/reminderdetail';
+import my_goal from './src/components/drawer/my_goal';
+import history from './src/components/drawer/history';
+import my_bottle from './src/components/drawer/my_bottle';
 var ROUTES = {
   login: Login,
   splash:Splash,
-  home:home
+  home:home,
+  reminder:reminder,
+  reminderd:reminderd,
+  my_goal:my_goal,
+  history:history,
+  my_bottle:my_bottle
+ 
 };
 
 export default class smartbottleapp extends Component {
 
   renderScene(route, navigator) {
     var Component = ROUTES[route.name];
-    return <Component route={route} navigator={navigator} />;
+    return <Provider store={store}><Component route={route} navigator={navigator} {...route.passProps} /></Provider>;
   }
   
   render() {
     return (
       <Navigator
         
-        initialRoute={ {name: 'splash'} }
+        initialRoute={ {name: 'home'} }
         renderScene={this.renderScene}
         configureScene={ () => { return Navigator.SceneConfigs.FloatFromRight; } }/>
     );
