@@ -18,12 +18,11 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import ActionButton from 'react-native-action-button';
 
 export default class my_bottle extends Component {
-  redirect(){
-
-    this.props.navigator.push({
-          name: 'reminderd'
+    redirect(name){
+        this.props.navigator.push({
+            name: name
         });
-  }
+    }
   comeback(){
     this.props.navigator.pop();
   }
@@ -33,11 +32,10 @@ export default class my_bottle extends Component {
         <View style={styles.navbar}>
             <Icon style={styles.leftText} name="arrow-left" size={30} onPress={this.comeback.bind(this)}/>
             <Text style={styles.midText}>My Bottles</Text>
-           
         </View>
 
-        
-        
+
+        <TouchableOpacity onPress={() => this.redirect('select_bottle')}>
         <View style={styles.rowContainer} >
           <Image style={styles.thumb1} source={require('../../images/bottle.png')}/>
           <View  style={styles.textContainer}>
@@ -48,6 +46,7 @@ export default class my_bottle extends Component {
           </View>
           <Icon.Button name="pencil" iconStyle={{marginLeft:10}} size={15} backgroundColor="#3b5998" onPress={this.loginWithFacebook}></Icon.Button>
         </View>
+        </TouchableOpacity>
 
         <View style={styles.rowContainer} >
           <Image style={styles.thumb1} source={require('../../images/bottle.png')}/>
@@ -117,13 +116,9 @@ const styles = StyleSheet.create({
     fontSize:20
   },
    navbar: {
-    
     height: 64,
-    
     width:340,
-   
     flexDirection: 'row', // step 1
-    
     alignItems: 'center',
   },
   container: {

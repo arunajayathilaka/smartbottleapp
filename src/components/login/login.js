@@ -21,6 +21,11 @@ export default class login extends Component{
 		    });
 		}
 	}
+    onSignupPressed(){
+        this.props.navigator.push({
+            name: 'signup'
+        });
+    }
 	render(){
 		return(
 			<View style={styles.wrapper}>
@@ -41,12 +46,14 @@ export default class login extends Component{
 				<TouchableOpacity onPress={this.onLoginPressed.bind(this)} style={styles.buttonContainer}>
 				<Text style={styles.buttonText}>LOGIN</Text>
 				</TouchableOpacity>
+					<TouchableOpacity onPress={this.onSignupPressed.bind(this)}>
 				<View style={styles.regContainer}>
 				<Text style={styles.signupText}>
 				<Text >DONT HAVE AN ACCOUNT?  </Text>
 				<Text style={styles.registerText}>Register</Text>
 				</Text>
 				</View>
+					</TouchableOpacity>
 				</View>
 			</View>
 

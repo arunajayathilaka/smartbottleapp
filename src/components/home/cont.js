@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Button,
-  View,
-  StyleSheet,
-  Image,
-  Text,
-  TouchableHighlight,
-  TouchableOpacity,
-} from 'react-native';
+import {Button, View, StyleSheet, Image, Text, TouchableHighlight, TouchableOpacity,} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 export default class cont extends Component {
@@ -21,6 +13,7 @@ export default class cont extends Component {
     return (
       <View>
       <View>
+        <TouchableOpacity onPress={() => this.redirect('profile')}>
        <View style={styles.rowContainer}>
           <Image style={styles.thumb} source={require('../../images/user1.png')} />
           <View  style={styles.textContainer}>
@@ -29,6 +22,7 @@ export default class cont extends Component {
                   numberOfLines={1}>User</Text>
           </View>
         </View>
+        </TouchableOpacity>
         <View style={styles.separator}/>
       </View>
         <TouchableOpacity onPress={() => this.redirect('history')}>
@@ -66,6 +60,7 @@ export default class cont extends Component {
         <View style={styles.separator}/>
         </TouchableOpacity>
 
+        <TouchableOpacity onPress={() => this.redirect('profile')}>
         <View style={styles.rowContainer}>
           <Icon style={styles.thumb1} name="cogs" size={30} />
           <View  style={styles.textContainer}>
@@ -74,6 +69,7 @@ export default class cont extends Component {
                   numberOfLines={1}>Settings</Text>
           </View>
         </View>
+        </TouchableOpacity>
 
         <View style={styles.separator}/>
         <View style={styles.rowContainer}>

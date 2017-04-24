@@ -5,14 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  Image,
-  TouchableHighlight,
-  View,Button
-} from 'react-native';
+import {AppRegistry, StyleSheet, Text, Image, TouchableHighlight, View,Button} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 //import header from '../header/header';
@@ -39,8 +32,7 @@ export default class home extends Component {
   };
   render() {
     return (
-     
-      
+
         <Drawer
         ref={(ref) => this._drawer = ref}
         content={<Cont navigator={this.props.navigator} closewin={this.closeControlPanel.bind(this)}/>}

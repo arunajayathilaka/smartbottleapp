@@ -26,6 +26,9 @@ import reminderd from './src/components/reminder/reminderdetail';
 import my_goal from './src/components/drawer/my_goal';
 import history from './src/components/drawer/history';
 import my_bottle from './src/components/drawer/my_bottle';
+import signup from './src/components/signup/signup';
+import profile from './src/components/drawer/profile';
+import select_bottle from './src/components/bottles/select_bottle';
 var ROUTES = {
   login: Login,
   splash:Splash,
@@ -34,7 +37,10 @@ var ROUTES = {
   reminderd:reminderd,
   my_goal:my_goal,
   history:history,
-  my_bottle:my_bottle
+  my_bottle:my_bottle,
+    signup:signup,
+    profile:profile,
+    select_bottle:select_bottle
  
 };
 
@@ -49,7 +55,7 @@ export default class smartbottleapp extends Component {
     return (
       <Navigator
         
-        initialRoute={ {name: 'home'} }
+        initialRoute={ {name: 'login'} }
         renderScene={this.renderScene}
         configureScene={ () => { return Navigator.SceneConfigs.FloatFromRight; } }/>
     );

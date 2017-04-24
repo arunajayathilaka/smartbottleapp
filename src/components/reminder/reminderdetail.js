@@ -5,14 +5,7 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  Switch,
-  TouchableOpacity,
-  View
-} from 'react-native';
+import { AppRegistry, StyleSheet, Text, Switch, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import DatePicker from 'react-native-datepicker';
 import {bindActionCreators} from 'redux';
@@ -33,9 +26,7 @@ class reminderdetail extends Component {
 
       
     }
-  
   }
-
 
    comeback(){
     this.props.navigator.pop();
